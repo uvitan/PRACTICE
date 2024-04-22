@@ -1,0 +1,24 @@
+//Write a c program to calculate area of circle and rectangl//
+#include<stdio.h>
+int main()
+{
+	int l,b;
+	int area1;
+	float area2,r;
+	printf("enter the length of rectangle:");
+	scanf("%d",&l );
+	printf("enter the breadth of rectangle:");
+	scanf("%d",&b);
+	printf("enter the radius :");
+	scanf("%f",&r);
+	
+	
+	area1=l*b;
+	area2=3.14*r*r;
+	
+	printf("area of reactangle:%d\n", area1);
+	printf("area of triangle:%f", area2);
+	
+	return 0;
+	
+}
