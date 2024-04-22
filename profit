@@ -1,0 +1,38 @@
+Write a program to calculate profit earn in an intraday share trading with following charges on following charges on transaction
+//The current maximum intraday brokerage offered is 0.03%for buying and 0.03% for selling 
+#include <stdio.h>
+
+int main() {
+    float buyPrice, sellPrice, quantity;
+    float buyBrokerage, sellBrokerage;
+    float totalBuyCost, totalSellValue;
+    float profit;
+
+    // Input buy and sell prices
+    printf("Enter buy price per share: ");
+    scanf("%f", &buyPrice);
+    printf("Enter sell price per share: ");
+    scanf("%f", &sellPrice);
+    
+    // Input quantity
+    printf("Enter quantity of shares: ");
+    scanf("%f", &quantity);
+
+    // Calculate brokerage charges
+    buyBrokerage = buyPrice * quantity * 0.0003;
+    sellBrokerage = sellPrice * quantity * 0.0003;
+
+    // Calculate total buy cost and total sell value
+    totalBuyCost = (buyPrice * quantity) + buyBrokerage;
+    totalSellValue = (sellPrice * quantity) - sellBrokerage;
+
+    // Calculate profit
+    profit = totalSellValue - totalBuyCost;
+
+    // Output
+    printf("Total buy cost: %.2f\n", totalBuyCost);
+    printf("Total sell value: %.2f\n", totalSellValue);
+    printf("Profit: %.2f\n", profit);
+
+    return 0;
+}
